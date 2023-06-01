@@ -1,0 +1,17 @@
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\bin\Debug\chessnew.exe.config
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\bin\Debug\chessnew.exe
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\bin\Debug\chessnew.pdb
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\chessnew.csproj.AssemblyReference.cache
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\chessnew.csproj.SuggestedBindingRedirects.cache
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\MainWindow.g.cs
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\App.g.cs
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\chessnew_MarkupCompile.cache
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\chessnew_MarkupCompile.lref
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\App.baml
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\MainWindow.baml
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\chessnew.g.resources
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\chessnew.Properties.Resources.resources
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\chessnew.csproj.GenerateResource.cache
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\chessnew.csproj.CoreCompileInputs.cache
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\chessnew.exe
+C:\Users\kristiyana.za\source\repos\chessnew\chessnew\obj\Debug\chessnew.pdb

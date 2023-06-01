@@ -1,0 +1,427 @@
+﻿<Window x:Class="chessnew.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:chessnew"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid x:Name="myGrid" AllowDrop="True" Background="Transparent" >
+        <Border BorderThickness="50" BorderBrush="{StaticResource BoardOutline}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0" Background="{StaticResource EvenTile}">
+                    <Canvas x:Name="A8" AllowDrop="True" Background="Transparent" DragLeave="A8_DragLeave" Drop="A8_Drop" >
+                        <Rectangle Name="Rook1Black" Width="80" Height="80" MouseMove="Rook_Move">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Rook Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1" Background="{StaticResource OddTile}">
+                    <Canvas Name="B8" AllowDrop="True" Background ="Transparent" DragLeave="B8_DragLeave" Drop="B8_Drop" >
+                        <Rectangle Name="Knight1Black" Width="80" Height="80" MouseMove="Knight1Black_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Knight Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="2" Background="{StaticResource EvenTile}">
+                    <Canvas x:Name="C8" AllowDrop="True" Background="Transparent" DragLeave="C8_DragLeave" Drop="C8_Drop">
+                        <Rectangle Name="BiShop1Black" Width="80" Height="80" MouseMove="BiShop1Black_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Bishop Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="3" Background="{StaticResource OddTile}">
+                    <Canvas x:Name="D8" AllowDrop="True" Background="Transparent" DragLeave="D8_DragLeave" Drop="D8_Drop">
+                        <Rectangle Name="QueenBlack" Width="80" Height="80" MouseMove="QueenBlack_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Queen Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="4" Background="{StaticResource EvenTile}">
+                    <Canvas x:Name="E8" AllowDrop="True" Background="Transparent" DragLeave="E8_DragLeave" Drop="E8_Drop">
+                        <Rectangle Name="KingBlack" Width="80" Height="80" MouseMove="KingBlack_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/King Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="5" Background="{StaticResource OddTile}">
+                    <Canvas x:Name="F8" AllowDrop="True" Background="Transparent" DragLeave="F8_DragLeave" Drop="F8_Drop">
+                        <Rectangle Name="BiShop2Black" Width="80" Height="80" MouseMove="BiShop2Black_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Bishop Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="6" Background="{StaticResource EvenTile}">
+                    <Canvas x:Name="G8" AllowDrop="True" Background="Transparent" DragLeave="G8_DragLeave" Drop="G8_Drop">
+                        <Rectangle Name="Knight2Black" Width="80" Height="80" MouseMove="Knight2Black_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Knight Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="7" Background="{StaticResource OddTile}">
+                    <Canvas x:Name="H8" AllowDrop="True" Background="Transparent" DragLeave="H8_DragLeave" Drop="H8_Drop">
+                        <Rectangle Name="Rook2Black" Width="80" Height="80" MouseMove="Rook2Black_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Rook Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0" Background="{StaticResource OddTile}">
+                    <Canvas x:Name="A7" AllowDrop="True" Background="Transparent" DragLeave="A7_DragLeave" Drop="A7_Drop">
+                        <Rectangle Name="Pawn1" Width="80" Height="80" MouseMove="Pawn1_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1" Background="{StaticResource EvenTile}">
+                    <Canvas x:Name="B7" AllowDrop="True" Background="Transparent" DragLeave="B7_DragLeave" Drop="B7_Drop">
+                        <Rectangle Name="Pawn2" Width="80" Height="80" MouseMove="Pawn2_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2" Background="{StaticResource OddTile}">
+                    <Canvas x:Name="C7" AllowDrop="True" Background="Transparent" DragLeave="C7_DragLeave" Drop="C7_Drop">
+                        <Rectangle Name="Pawn3" Width="80" Height="80" MouseMove="Pawn3_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="3" Background="{StaticResource EvenTile}">
+                    <Canvas x:Name="D7" AllowDrop="True" Background="Transparent" DragLeave="D7_DragLeave" Drop="D7_Drop">
+                        <Rectangle Name="Pawn4" Width="80" Height="80" MouseMove="Pawn4_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="4" Background="{StaticResource OddTile}">
+                    <Canvas x:Name="E7" AllowDrop="True" Background="Transparent" DragLeave="E7_DragLeave" Drop="E7_Drop">
+                        <Rectangle Name="Pawn5" Width="80" Height="80" MouseMove="Pawn5_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="5" Background="{StaticResource EvenTile}">
+                    <Canvas x:Name="F7" AllowDrop="True" Background="Transparent" DragLeave="F7_DragLeave" Drop="F7_Drop">
+                        <Rectangle Name="Pawn6" Width="80" Height="80" MouseMove="Pawn6_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="6" Background="{StaticResource OddTile}">
+                    <Canvas x:Name="G7" AllowDrop="True" Background="Transparent" DragLeave="G7_DragLeave" Drop="G7_Drop">
+                        <Rectangle Name="Pawn7" Width="80" Height="80" MouseMove="Pawn7_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="7" Background="{StaticResource EvenTile}">
+                    <Canvas x:Name="H7" AllowDrop="True" Background="Transparent" DragLeave="H7_DragLeave" Drop="H7_Drop">
+                        <Rectangle Name="Pawn8" Width="80" Height="80" MouseMove="Pawn8_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown Black.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="0" Background="{StaticResource EvenTile}">
+                    <Canvas x:Name="A6" AllowDrop="True" Background="Transparent" Drop="A6_Drop" DragLeave="A6_DragLeave" Margin="0,-4,0,4"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1" Background="{StaticResource OddTile}">
+                    <Canvas x:Name="B6" AllowDrop="True" Background="Transparent" DragLeave="B6_DragLeave" Drop="B6_Drop"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="2" Background="{StaticResource EvenTile}">
+                    <Canvas Name="C6" AllowDrop="True" Background ="Transparent" DragLeave="C6_DragLeave" Drop="C6_Drop"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="3" Background="{StaticResource OddTile}">
+                    <Canvas Name="D6" AllowDrop="True" Background ="Transparent" DragLeave="D6_DragLeave" Drop="D6_Drop"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="4" Background="{StaticResource EvenTile}">
+                    <Canvas Name="E6" AllowDrop="True" Background ="Transparent" DragLeave="E6_DragLeave" Drop="E6_Drop"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="5" Background="{StaticResource OddTile}">
+                    <Canvas Name="F6" AllowDrop="True" Background ="Transparent" DragLeave="F6_DragLeave" Drop="F6_Drop"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="6" Background="{StaticResource EvenTile}">
+                    <Canvas Name="G6" AllowDrop="True" Background ="Transparent" DragLeave="G6_DragLeave" Drop="G6_Drop"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="7" Background="{StaticResource OddTile}">
+                    <Canvas Name="H6" AllowDrop="True" Background ="Transparent" DragLeave="H6_DragLeave" Drop="H6_Drop"/>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="0" Background="{StaticResource OddTile}">
+                    <Canvas Name="A5" AllowDrop="True" Background ="Transparent" DragLeave="A5_DragLeave" Drop="A5_Drop"/>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="1" Background="{StaticResource EvenTile}">
+                    <Canvas Name="B5" AllowDrop="True" Background ="Transparent" DragLeave="B5_DragLeave" Drop="B5_Drop"/>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="2" Background="{StaticResource OddTile}">
+                    <Canvas Name="C5" AllowDrop="True" Background ="Transparent" DragLeave="C5_DragLeave" Drop="C5_Drop"/>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="3" Background="{StaticResource EvenTile}">
+                    <Canvas Name="D5" AllowDrop="True" Background ="Transparent" DragLeave="D5_DragLeave" Drop="D5_Drop"/>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="4" Background="{StaticResource OddTile}">
+                    <Canvas Name="E5" AllowDrop="True" Background ="Transparent" DragLeave="E5_DragLeave" Drop="E5_Drop"/>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="5" Background="{StaticResource EvenTile}">
+                    <Canvas Name="F5" AllowDrop="True" Background ="Transparent" DragLeave="F5_DragLeave" Drop="F5_Drop"/>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="6" Background="{StaticResource OddTile}">
+                    <Canvas Name="G5" AllowDrop="True" Background ="Transparent" DragLeave="G5_DragLeave" Drop="G5_Drop"/>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="7" Background="{StaticResource EvenTile}">
+                    <Canvas Name="H5" AllowDrop="True" Background ="Transparent" DragLeave="H5_DragLeave" Drop="H5_Drop"/>
+                </Grid>
+
+                <Grid Grid.Row="4" Grid.Column="0" Background="{StaticResource EvenTile}">
+                    <Canvas Name="A4" AllowDrop="True" Background ="Transparent" DragLeave="A4_DragLeave" Drop="A4_Drop"/>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="1" Background="{StaticResource OddTile}">
+                    <Canvas Name="B4" AllowDrop="True" Background ="Transparent" DragLeave="B4_DragLeave" Drop="B4_Drop"/>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="2" Background="{StaticResource EvenTile}">
+                    <Canvas Name="C4" AllowDrop="True" Background ="Transparent" DragLeave="C4_DragLeave" Drop="C4_Drop"/>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="3" Background="{StaticResource OddTile}">
+                    <Canvas Name="D4" AllowDrop="True" Background ="Transparent" DragLeave="D4_DragLeave" Drop="D4_Drop"/>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="4" Background="{StaticResource EvenTile}">
+                    <Canvas Name="E4" AllowDrop="True" Background ="Transparent" DragLeave="E4_DragLeave" Drop="E4_Drop"/>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="5" Background="{StaticResource OddTile}">
+                    <Canvas Name="F4" AllowDrop="True" Background ="Transparent" DragLeave="F4_DragLeave" Drop="F4_Drop"/>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="6" Background="{StaticResource EvenTile}">
+                    <Canvas Name="G4" AllowDrop="True" Background ="Transparent" DragLeave="G4_DragLeave" Drop="G4_Drop"/>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="7" Background="{StaticResource OddTile}">
+                    <Canvas Name="H4" AllowDrop="True" Background ="Transparent" DragLeave="H4_DragLeave" Drop="H4_Drop"/>
+                </Grid>
+
+                <Grid Grid.Row="5" Grid.Column="0" Background="{StaticResource OddTile}">
+                    <Canvas Name="A3" AllowDrop="True" Background ="Transparent" DragLeave="A3_DragLeave" Drop="A3_Drop"/>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="1" Background="{StaticResource EvenTile}">
+                    <Canvas Name="B3" AllowDrop="True" Background ="Transparent" DragLeave="B3_DragLeave" Drop="B3_Drop"/>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="2" Background="{StaticResource OddTile}">
+                    <Canvas Name="C3" AllowDrop="True" Background ="Transparent" DragLeave="C3_DragLeave" Drop="C3_Drop"/>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="3" Background="{StaticResource EvenTile}">
+                    <Canvas Name="D3" AllowDrop="True" Background ="Transparent" DragLeave="D3_DragLeave" Drop="D3_Drop"/>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="4" Background="{StaticResource OddTile}">
+                    <Canvas Name="E3" AllowDrop="True" Background ="Transparent" DragLeave="E3_DragLeave" Drop="E3_Drop"/>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="5" Background="{StaticResource EvenTile}">
+                    <Canvas Name="F3" AllowDrop="True" Background ="Transparent" DragLeave="F3_DragLeave" Drop="F3_Drop"/>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="6" Background="{StaticResource OddTile}">
+                    <Canvas Name="G3" AllowDrop="True" Background ="Transparent" DragLeave="G3_DragLeave" Drop="G3_Drop"/>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="7" Background="{StaticResource EvenTile}">
+                    <Canvas Name="H3" AllowDrop="True" Background ="Transparent" DragLeave="H3_DragLeave" Drop="H3_Drop"/>
+                </Grid>
+
+                <Grid Grid.Row="6" Grid.Column="0" Background="{StaticResource EvenTile}">
+                    <Canvas Name="A2" AllowDrop="True" Background ="Transparent" DragLeave="A2_DragLeave" Drop="A2_Drop">
+                        <Rectangle Name="Pawn1White" Width="80" Height="80" MouseMove="Pawn1White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="1" Background="{StaticResource OddTile}">
+                    <Canvas Name="B2" AllowDrop="True" Background ="Transparent" DragLeave="B2_DragLeave" Drop="B2_Drop">
+                        <Rectangle Name="Pawn2White" Width="80" Height="80" MouseMove="Pawn2White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Chess/Pown White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="2" Background="{StaticResource EvenTile}">
+                    <Canvas Name="C2" AllowDrop="True" Background ="Transparent" DragLeave="C2_DragLeave" Drop="C2_Drop">
+                        <Rectangle Name="Pawn3White" Width="80" Height="80" MouseMove="Pawn3White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="3" Background="{StaticResource OddTile}">
+                    <Canvas Name="D2" AllowDrop="True" Background ="Transparent" DragLeave="D2_DragLeave" Drop="D2_Drop">
+                        <Rectangle Name="Pawn4White" Width="80" Height="80" MouseMove="Pawn4White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Chess/Pown White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="4" Background="{StaticResource EvenTile}">
+                    <Canvas Name="E2" AllowDrop="True" Background ="Transparent" DragLeave="E2_DragLeave" Drop="E2_Drop">
+                        <Rectangle Name="Pawn5White" Width="80" Height="80" MouseMove="Pawn5White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="5" Background="{StaticResource OddTile}">
+                    <Canvas Name="F2" AllowDrop="True" Background ="Transparent" DragLeave="F2_DragLeave" Drop="F2_Drop">
+                        <Rectangle Name="Pawn6White" Width="80" Height="80" MouseMove="Pawn6White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="6" Background="{StaticResource EvenTile}">
+                    <Canvas Name="G2" AllowDrop="True" Background ="Transparent" DragLeave="G2_DragLeave" Drop="G2_Drop">
+                        <Rectangle Name="Pawn7White" Width="80" Height="80" MouseMove="Pawn7White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="7" Background="{StaticResource OddTile}">
+                    <Canvas Name="H2" AllowDrop="True" Background ="Transparent" DragLeave="H2_DragLeave" Drop="H2_Drop">
+                        <Rectangle Name="Pawn8White" Width="80" Height="80" MouseMove="Pawn8White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/Pown White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+
+                <Grid Grid.Row="7" Grid.Column="0" Background="{StaticResource OddTile}">
+                    <Canvas Name="A1" AllowDrop="True" Background ="Transparent" DragLeave="A1_DragLeave" Drop="A1_Drop">
+                        <Rectangle Name="Rook1White" Width="80" Height="80" MouseMove="Rook1White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Chess/Rook White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="1" Background="{StaticResource EvenTile}">
+                    <Canvas Name="B1" AllowDrop="True" Background ="Transparent" DragLeave="B1_DragLeave" Drop="B1_Drop">
+                        <Rectangle Name="Knight1White" Width="80" Height="80" MouseMove="Knight1White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Chess/Knight White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="2" Background="{StaticResource OddTile}">
+                    <Canvas Name="C1" AllowDrop="True" Background ="Transparent" DragLeave="C1_DragLeave" Drop="C1_Drop">
+                        <Rectangle Name="Bishop1White" Width="80" Height="80" MouseMove="Bishop1White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Chess/Bishop white.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="3" Background="{StaticResource EvenTile}">
+                    <Canvas Name="D1" AllowDrop="True" Background ="Transparent" DragLeave="D1_DragLeave" Drop="D1_Drop">
+                        <Rectangle Name="QueenWhite" Width="80" Height="80" MouseMove="QueenWhite_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Chess/Queen White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="4" Background="{StaticResource OddTile}">
+                    <Canvas Name="E1" AllowDrop="True" Background ="Transparent" DragLeave="E1_DragLeave" Drop="E1_Drop">
+                        <Rectangle Name="KingWhite" Width="80" Height="80" MouseMove="KingWhite_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Image/King White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="5" Background="{StaticResource EvenTile}">
+                    <Canvas Name="F1" AllowDrop="True" Background ="Transparent" DragLeave="F1_DragLeave" Drop="F1_Drop">
+                        <Rectangle Name="Bishop2White" Width="80" Height="80" MouseMove="Bishop2White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Chess/Bishop white.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="6" Background="{StaticResource OddTile}">
+                    <Canvas Name="G1" AllowDrop="True" Background ="Transparent" DragLeave="G1_DragLeave" Drop="G1_Drop">
+                        <Rectangle Name="Knight2White" Width="80" Height="80" MouseMove="Knight2White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Chess/Knight White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="7" Background="{StaticResource EvenTile}">
+                    <Canvas Name="H1" AllowDrop="True" Background ="Transparent" DragLeave="H1_DragLeave" Drop="H1_Drop">
+                        <Rectangle Name="Rook2White" Width="80" Height="80" MouseMove="Rook_2White_MouseMove">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Chess/Rook White.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Canvas>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
